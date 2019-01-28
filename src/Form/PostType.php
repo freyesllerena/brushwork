@@ -15,6 +15,7 @@ use App\Entity\Post;
 use App\Form\Type\DateTimePickerType;
 use App\Form\Type\TagsInputType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -47,6 +48,9 @@ class PostType extends AbstractType
                 'attr' => ['autofocus' => true],
                 'label' => 'label.title',
             ])
+            ->add('imageFile', FileType::class, [
+                'required' => false
+            ])
             ->add('summary', TextareaType::class, [
                 'help' => 'help.post_summary',
                 'label' => 'label.summary',
@@ -63,8 +67,7 @@ class PostType extends AbstractType
             ->add('tags', TagsInputType::class, [
                 'label' => 'label.tags',
                 'required' => false,
-            ])
-        ;
+            ]);
     }
 
     /**

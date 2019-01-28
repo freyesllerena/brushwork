@@ -4,7 +4,9 @@
 
 {% block main %}
     <h1>{{ post.title }}</h1>
-
+    {% if (post.filename) %}
+        <img src="/images/properties/{{ post.filename }}" alt="" style="width: 400px; height: auto"/>
+    {% endif %}
     <p class="post-metadata">
         <span class="metadata"><i class="fa fa-calendar"></i> {{ post.publishedAt|localizeddate('long', 'medium', null, 'UTC') }}</span>
         <span class="metadata"><i class="fa fa-user"></i> {{ post.author.fullName }}</span>
