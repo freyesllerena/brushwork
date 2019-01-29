@@ -74,6 +74,9 @@ class Post
     /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      * @var File|null
+     * @Assert\Image(
+     *     mimeTypes="image/jpeg"
+     * )
      * @Vich\UploadableField(mapping="property_image", fileNameProperty="filename")
      */
     private $imageFile;

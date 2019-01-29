@@ -11,6 +11,7 @@
         "doctrine/orm": "^2.5.11",
         "erusev/parsedown": "^1.6",
         "ezyang/htmlpurifier": "^4.9",
+        "liip/imagine-bundle": "^2.1",
         "sensio/framework-extra-bundle": "^5.1",
         "sensiolabs/security-checker": "^5.0",
         "symfony/apache-pack": "^1.0",
